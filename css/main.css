@@ -1,0 +1,526 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+/* inicio de css general  */
+.contentBody{
+    font-family:'Lato', sans-serif;
+    color: white;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+nav ul{
+    display: flex;
+    list-style: none;
+    text-align: center;
+}
+nav ul li{
+    padding: 0.3rem 1rem;
+}
+.navBar{
+    border-right: 0.07rem solid white;
+}
+nav ul li a{
+    font-weight: 100;
+    font-size: 0.7rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white;
+}
+footer{
+    background-color: black;
+    display: flex;
+    justify-content: center;
+}
+footer ul li{
+    list-style: none;
+    font-size: 0.7rem;
+    display: inline-block;
+    text-align: center;
+    padding: 0.6rem;
+}
+footer ul li p{
+    color: white;
+    margin-right: 1.5rem;
+}
+footer ul li a{
+    text-decoration: none;
+    color: white;
+}
+footer ul li a:hover{
+    color: rgb(220, 237, 250);
+}
+/* cierre de css general */
+/* inicio de index */
+.contentIndex{
+    background-image: url(../img/192.jpg);
+    height:100vh;
+}
+.mainIndex{
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding: 4rem;
+}
+/* cierre de index */
+/* inicio de características de section en las páginas*/
+.contentPages{
+    background: rgb(8,0,140);
+    background: linear-gradient(90deg, rgba(8,0,140,1) 0%, rgba(8,0,140,1) 46%, rgba(31,136,157,1) 100%);
+}
+section div ul li{
+    list-style: none;
+    padding: 0.3rem 0rem;
+    font-size: 1rem;
+    font-weight: lighter;
+}
+section div ul li a{
+    text-decoration: none;
+    color: white;
+}
+
+/* ciere de características de section en las páginas */
+/* Inicio de page about */
+.mainAbout {
+    display: grid;
+    grid-template-areas:
+    "mainAboutImgP mainAboutImgP"
+    "mainArtist mainLabels";
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin: 2rem;
+}  
+.mainAboutImgP {
+    grid-area: mainAboutImgP;
+    display: flex;  
+    justify-content: center;
+    align-content: center;
+    border-bottom: 0.125rem solid white;
+    margin-bottom: 3rem;
+}
+.mainAboutP {
+    margin: 1.3rem;
+    padding: 1.2rem 0rem;
+    font-size: 1.6rem;
+    line-height: 1.9rem;
+    font-weight: lighter;
+}
+.mainArtist { 
+    grid-area: mainArtist;
+}
+.mainArtist h1{
+    font-size: 1.4rem;
+    width: 85%;
+    border-bottom: 0.125rem solid white;
+    text-transform: uppercase;
+}
+.artistList{
+    display: flex;  
+}
+.mainLabels h2{
+    font-size: 1.4rem;
+    width: 85%;
+    border-bottom: 0.125rem solid white;
+    text-transform: uppercase;
+}
+section div ul{
+    margin-top: 1rem;
+    margin-right: 3rem;
+}
+.mainLabels { 
+    grid-area: mainLabels;
+    margin: 0rem 2rem;
+}
+/* inicio de boton para subir al nav, usado en gallery y en store */
+.irNav{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    height:60px;
+    width:60px;
+    display: inline-block;
+    margin: 30px;
+    background-color: #173592;
+    border: 2px solid white;
+    border-radius: 30px;
+    text-align: center;
+}
+.irNav a{
+    color: white;
+    text-align: center;
+    font-size: 40px;
+    font-weight: 100;
+}
+.irNav a i{
+    padding: 5px;
+}
+/* cierre de boton para subir al nav */
+/* inicio de las caractéristicas da la página Gallery */
+.mainGallery{
+    display: grid;
+    grid-template-areas:
+     "sectionGallery1 sectionGallery1 sectionGallery1"
+     "sectionGallery1 sectionGallery1 sectionGallery1"
+     "sectionGallery1 sectionGallery1 sectionGallery1"
+     "sectionGallery1 sectionGallery1 sectionGallery1"
+     "sectionGallery2 sectionGallery2 sectionGallery2"
+     "sectionGallery2 sectionGallery2 sectionGallery2"
+     "sectionGallery3 sectionGallery3 sectionGallery3"
+     "sectionGallery4 sectionGallery4 sectionGallery4";
+}
+.sectionGallery1{
+    grid-area: sectionGallery1;
+}
+.gallery img{
+    margin:1rem 3rem 
+}
+.mainGallery h1, .mainGallery h2{
+    margin: 1rem 3rem;
+    width: 95%;
+    padding-bottom: 0.5rem;
+    border-bottom:  0.125rem solid white;
+}
+.sectionGallery2{
+    grid-area: sectionGallery2;
+}
+.sectionGallery3{
+    grid-area: sectionGallery3;
+}
+.sectionGallery4{
+    grid-area: sectionGallery4;
+}
+/* cierre de las caractéristicas da la página Gallery */
+/* inicio de carcterísticas de la página store */
+.mainStore{
+    display: grid;
+    grid-template-areas: 
+    "cvrStore1 cvrStore2 cvrStore3"
+    "cvrStore4 cvrStore5 cvrStore6";
+    margin: 2.5rem 0.7rem;
+}
+.cvrStore1{
+    grid-area: cvrStore1;
+}
+.cvrStore2{
+    grid-area: cvrStore2;
+}
+.cvrStore3{
+    grid-area: cvrStore3;
+}
+.cvrStore4{
+    grid-area: cvrStore4;
+}
+.cvrStore5{
+    grid-area: cvrStore5;
+}
+.cvrStore6{
+    grid-area: cvrStore6;
+}
+.cvr{
+    margin: 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+}
+.coverName{
+    font-weight: 900;
+    padding: 0.3rem 0rem;
+}
+.linkShop{
+    display: flex;
+    justify-content: space-between;
+    padding: 0.3rem;
+    border-top: 0.07rem  solid white;
+    border-bottom:  0.07rem solid white;
+    font-weight: 100;
+}
+.linkShop a{
+    text-decoration: none;
+    text-transform: uppercase;
+    color: white
+}
+/* cierre de carcterísticas de la página store */
+/*inicio de características de la página contacto*/
+.mainContact{
+    display: flex; 
+    grid-template-areas: 
+    "h1"
+    "form";
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    row-gap: 1rem;
+}
+.mainContact h1{
+    grid-area: h1;
+    display: inline-block;
+    text-align: center;
+    width: 40rem;
+    font-size: 3rem;
+    border-bottom: 0.125rem solid white;
+}
+/* inicio de formulario */
+form{
+    grid-area: form;
+    padding: 1rem;
+}
+form div input, form div h3, .formBox textarea{
+    margin: 0.4rem;
+    padding: 0.2rem;
+}
+.formName input, .formEmail input{
+    width: 31rem;
+    height: 2rem;
+    font-size: 1rem;   
+} 
+form div h3{
+    font-size: 1.5rem;
+}
+.formBox textarea{
+    width: 31rem;
+    height: 20rem;
+    font-size: 1rem;
+}  
+.formBox input{
+    background-color: #1e3e9e;
+    color: white;
+    text-transform: uppercase;
+    font-size: medium;
+    padding: 0.4rem 1rem;
+    border: 0.125rem solid white;
+}
+/* cierre de formulario */
+/* media queries */
+@media only screen and (max-width: 1300px){
+    /* inicio de características de la página About*/
+    .mainAbout {
+        display: grid;
+        grid-template-areas:
+        "mainAboutImgP mainAboutImgP"
+        "mainArtist mainArtist" 
+        "mainLabels mainLabels";
+        grid-template-columns: 3fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        margin: 1rem;
+    }  
+    .mainAboutImgP {
+        margin: 1rem;
+    }
+    .mainAboutP {
+        margin: 1rem;
+        padding: 1rem 0rem;
+        font-size: 1.3rem;
+        line-height: 1.6rem;
+    }
+    .mainArtist{
+        margin: 1rem; 
+    }
+    .mainArtist h1, .mainLabels h2{
+        width: 100%;
+    }
+    .mainLabels { 
+        margin: 1rem
+    }
+    /* cierre de características de la página About*/
+    /* inicio de características de la página Store*/
+    .mainStore{
+        display: grid;
+        grid-template-areas: 
+        "cvrStore1 cvrStore2"
+        "cvrStore3 cvrStore4"
+        "cvrStore5 cvrStore6";
+        margin: 2rem 1.5rem;
+    }
+     /* cierre de características de la página Store*/
+}    
+@media only screen and (max-width: 1024px) {
+    /*inicio de características generales de las páginas*/
+    .logoB{
+        display: none;
+    }
+    /*cierre de características generales de las páginas*/
+    /* inicio de características generales de la página Gallery*/
+    .gallery{
+        display: flex;
+        flex-direction: column;
+    }
+    /*cierre de características generales de la página Gallery*/
+    /* inicio de características de la página About*/
+    .mainAbout {
+        display: grid;
+        grid-template-areas:
+        "mainAboutImgP" 
+        "mainAboutImgP"
+        "mainArtist"
+        "mainLabels";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        margin: 1rem;
+    }  
+    .mainAboutImgP {
+        flex-direction: column; 
+        border-bottom: 0.125rem solid white;
+        align-items: center;
+        align-content: center;
+        margin-bottom: 0rem;
+        width: 97%;
+        margin-bottom: 1rem;
+    }
+    .mainAboutImg{
+        width: 50%;
+        align-self: center;
+    }
+    .mainAboutP {
+        margin: 1.3rem;
+        padding: 1.2rem 0rem;
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
+    .mainArtist h1, .mainLabels h2{
+        width: 100%;
+    }
+    .artistList{
+        display: grid;
+        grid-template-areas:
+        "column1 column2"
+        "column3 column4"
+        "column5 column5";  
+    }
+    .column1{
+        grid-area: column1;
+    }
+    .column2{
+        grid-area: column2;
+    }
+    .column3{
+        grid-area: column3;
+    }
+    .column4{
+        grid-area: column4;
+    }
+    .column5{
+        grid-area: column5;
+    }
+    section div ul{
+        margin-top: 1rem;
+        margin-right: 1rem;
+    }
+    /* cierre de características de la página About*/
+    /* inicio de características de la página Gallery*/
+    .mainGallery{
+        display: grid;
+        grid-template-areas:
+         "sectionGallery1"
+         "sectionGallery1"
+         "sectionGallery1"
+         "sectionGallery1"
+         "sectionGallery1"
+         "sectionGallery1"
+         "sectionGallery1"
+         "sectionGallery1"
+         "sectionGallery1"
+         "sectionGallery1"
+         "sectionGallery1"
+         "sectionGallery1"
+         "sectionGallery2"
+         "sectionGallery2"
+         "sectionGallery2"
+         "sectionGallery2"
+         "sectionGallery2"
+         "sectionGallery2"
+         "sectionGallery3"
+         "sectionGallery3"
+         "ectionGallery3"
+         "sectionGallery4"
+         "sectionGallery4"
+         "sectionGallery4";   
+    }
+    .gallery img{
+        margin:2.5rem;
+    }
+    .mainGallery h1, .mainGallery h2{
+        margin: 0.5rem 2rem;
+        width: 93%;
+    }
+    /* cierre de características de la página Gallery*/
+    /* inicio de características de la página Store*/
+    .mainStore{
+        display: grid;
+        grid-template-areas: 
+        "cvrStore1"
+        "cvrStore2"
+        "cvrStore3"
+        "cvrStore4"
+        "cvrStore5"
+        "cvrStore6";
+        margin: 2rem;
+    }
+    /* cierre de características de la página Store*/
+    /* inicio de características de la página Contact*/
+    .mainContact h1{
+        text-align: center;
+        width: 25rem;
+        font-size: 2.5rem;
+    }
+    /*inicio de las caracterísitcas de form*/
+    form{
+        grid-area: form;
+        padding: 1rem;
+    }
+    form div input, form div h3, .formBox textarea{
+        margin: 0.4rem;
+        padding: 0.2rem;
+    }
+    .formName input, .formEmail input{
+        width: 25rem;
+        height: 2rem;
+        font-size: 1rem;   
+    } 
+    form div h3{
+        font-size: 1.5rem;
+    }
+    .formBox textarea{
+        width: 25em;
+        height: 20rem;
+        font-size: 1rem;
+    }  
+    /* cierre de las caracterísitcas de form*/
+    /* cierre de características de la página Contact */
+}
+@media only screen and (max-width: 768px) {
+    /* inicio de características de la página Gallery*/
+    .gallery{
+        display: flex;
+        flex-direction: column;
+    }
+    .mainGallery h1, .mainGallery h2{
+        margin: 0.5rem 2rem;
+        width: 90%;
+    }
+    /* cierre de características de la página Gallery*/
+}
+@media only screen and (max-width: 480px) {
+    /*inicio de características generales de las páginas*/
+    .logoB{
+        display: none;
+    }
+    /*cierre de características generales de las páginas*/
+    /* inicio de características de la página About*/
+    .mainAbout {
+        margin: 0.3rem;
+    }  
+    /* cierre de características de la página About*/
+    /* inicio de características de la página Gallery*/
+    .gallery img{
+        margin:1rem;
+    }
+    .mainGallery h1, .mainGallery h2{
+        margin: 0.5rem 1rem;
+        width: 95%;
+    }
+    /* cierre de características de la página Gallery*/
+}
+/* cierre de media queries*/
