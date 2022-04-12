@@ -148,7 +148,19 @@ section div ul{
     border: 2px solid white;
     border-radius: 30px;
     text-align: center;
+    transition: 0.2s;
 }
+.irNav:hover{
+    background-color: rgba(31,136,157,1) ;
+}
+/* inicio de características de imagenes de las páginas Gallery y Store */
+.mainGallery img, main div img{
+    transition: 0.5s;
+}
+.mainGallery img:hover, main div img:hover{
+    transform: scale(1.5);        
+}
+/* cierre de características de imagenes de las páginas Gallery y Store */
 .irNav a{
     color: white;
     text-align: center;
