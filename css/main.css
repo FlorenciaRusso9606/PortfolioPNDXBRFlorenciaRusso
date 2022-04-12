@@ -158,7 +158,7 @@ section div ul{
     transition: 0.5s;
 }
 .mainGallery img:hover, main div img:hover{
-    transform: scale(1.5);        
+    transform: scale(1.1);        
 }
 /* cierre de características de imagenes de las páginas Gallery y Store */
 .irNav a{
