@@ -4,102 +4,130 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- css Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <!-- Nuestro css -->
     <link rel="stylesheet" href="../css/main.css">
+    <!-- pagina para iconos -->
     <script src="https://kit.fontawesome.com/ad5b547072.js" crossorigin="anonymous"></script>
     <enlace href="https: //fonts.googleapis.com/css2? family= Lato:ital,peso@1,100 & display=swap" rel="hoja de estilo"></enlace>
     <title>STORE</title>
 </head>
 <body>
-    <div class="contentBody">
-        <div class="contentPages">
-            <header>
-                <nav id="irNav">
-                    <a href="../index.html">
-                        <img class="logoA" src="../img/pndxbrlogopngsmall.png" alt="pndxbr logo">
-                    </a>
-                    <ul class="menu">
-                        <li class="navBar"><a href="../index.html">
-                            home
-                        </a></li>
-                        <li class="navBar"><a href="../pages/about.html">
-                            about
-                        </a></li>
-                        <li  class="navBar"><a href="../pages/gallery.html">
-                            gallery
-                        </a></li>
-                        <li class="navBar"><a href="../pages/store.html">
-                            store
-                        </a></li>
-                        <li><a href="../pages/contact.html">
-                            contact
-                        </a></li>
-                    </ul>
-                </nav>
+    <div class="content-body">
+        <div class="content-pages">
+            <header class="container">
+                <nav class="navbar navbar-expand-lg navbar-light" >
+                    <div class="container-fluid">
+                      <a class="navbar-brand" href="#"><img src="../img/pndxbrlogopngsmall.png" style="padding: 0rem;" alt=""></a>
+                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                      </button>
+                      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <ul class="navbar-nav">
+                          <li class="nav-item">
+                              <a class="nav-link active  border-end" style="font-size: 0.8rem; color: whitesmoke; padding: 0rem 1.2rem 0rem 0rem;" aria-current="page" href="../index.html">Home</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link border-end" style="font-size: 0.8rem; color: whitesmoke; padding: 0rem 1.2rem 0rem 0rem;" href="../pages/about.html">about</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link border-end" style="font-size: 0.8rem; color: whitesmoke; padding: 0rem 1.2rem 0rem 0rem;" href="../pages/gallery.html">gallery</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link  border-end" style="font-size: 0.8rem; color: whitesmoke; padding: 0rem 1.2rem 0rem 0rem;" href="../pages/store.html">store</a>
+                          </li>
+                          <li class="nav-item">
+                              <a class="nav-link" style="font-size: 0.8rem; color: whitesmoke; padding: 0rem;" href="../pages/contact.html">contact</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </nav>
             </header>
-            <main class="mainStore">
-                <div class="cvrStore1 cvr">
-                    <img src="../img/previews/cvrdsgn001.jpg" alt="preview 001">
-                    <p class="coverName">cvr.dsgn - 001</p>
-                    <div class="linkShop">
-                        <a href="">add to cart</a><p>$35.00</p>
+            <main class="container">
+                <section class="row justify-content-around mb-4">
+                    <div class="card col-4 mb-4" style="width: 23rem;">
+                        <img src="../img/previews/cvrdsgn001.jpg" class="card-img-top" alt="cvrdsgn001">
+                        <div class="card-body" style="padding: 1rem 0.3rem;">
+                          <h1 class="h3 card-title">cvr dsgn - 001</h1>
+                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                          <a href="#" class="btn btn-primary">add to cart</a>
+                        </div>
                     </div>
-                </div>
-                <div class="cvrStore2 cvr">
-                    <img src="../img/previews/cvrdsgn002.jpg" alt="preview 002">
-                    <p class="coverName">cvr.dsgn - 002</p>
-                    <div class="linkShop">
-                        <a href="">add to cart</a><p>$35.00</p>
+                    <div class="card col-4 mb-4" style="width: 23rem;">
+                        <img src="../img/previews/cvrdsgn002.jpg" class="card-img-top" alt="cvrdsgn002">
+                         <div class="card-body" style="padding: 1rem 0.3rem;">
+                            <h2 class="h3 card-title">cvr dsgn - 002</h2>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">add to cart</a>
+                        </div>
                     </div>
-                </div>
-                <div class="cvrStore3 cvr">
-                    <img src="../img/previews/cvrdsgn003.jpg" alt="preview 003">
-                    <p class="coverName">cvr.dsgn - 003</p>
-                    <div class="linkShop">
-                        <a href="">add to cart</a><p>$35.00</p>
+                    <div class="card col-4 mb-4" style="width: 23rem;">
+                        <img src="../img/previews/cvrdsgn003.jpg" class="card-img-top" alt="cvrdsgn003">
+                         <div class="card-body" style="padding: 1rem 0.3rem;">
+                            <h3 class="card-title">cvr dsgn - 002</h3>
+                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">add to cart</a>
+                        </div>
                     </div>
-                </div>
-                <div class="cvrStore4 cvr">
-                    <img src="../img/previews/cvrdsgn004.jpg" alt="preview004">
-                    <p class="coverName">cvr.dsgn - 004</p>
-                    <div class="linkShop">
-                        <a href="">add to cart</a><p>$35.00</p>
+                </section>
+                <section class="row justify-content-around mb-4">
+                    <div class="card card col-4 mb-4" style="width: 23rem ;">
+                        <img src="../img/previews/cvrdsgn004.jpg" class="card-img-top" alt="cvrdsgn004">
+                         <div class="card-body" style="padding: 1rem 0.3rem;">
+                            <h3 class="card-title">cvr dsgn - 002</h3>
+                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">add to cart</a>
+                        </div>
                     </div>
-                </div>
-                <div class="cvrStore5 cvr">
-                    <img src="../img/previews/cvrdsgn005.jpg" alt="preview 005">
-                    <p class="coverName">cvr.dsgn - 005</p>
-                    <div class="linkShop">
-                        <a href="">add to cart</a><p>$35.00</p>
+                    <div class="card card col-4 mb-4" style="width: 23rem;">
+                        <img src="../img/previews/cvrdsgn005.jpg" class="card-img-top" alt="cvrdsgn005">
+                         <div class="card-body" style="padding: 1rem 0.3rem;">
+                            <h3 class="card-title">cvr dsgn - 002</h3>
+                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">add to cart</a>
+                        </div>
                     </div>
-                </div>
-                <div class="cvrStore6 cvr">
-                    <img src="../img/previews/cvrdsgn006.jpg" alt="preview 006">
-                    <p class="coverName">cvr.dsgn - 006</p>
-                    <div class="linkShop">
-                        <a href="">add to cart</a><p>$35.00</p>
+                    <div class="card card col-4 mb-4" style="width: 23rem;">
+                        <img src="../img/previews/cvrdsgn006.jpg" class="card-img-top" alt="cvrdsgn006">
+                         <div class="card-body" style="padding: 1rem 0.3rem;">
+                            <h3 class=" card-title">cvr dsgn - 002</h3>
+                             <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <a href="#" class="btn btn-primary">add to cart</a>
+                        </div>
                     </div>
-                </div>
+                </section> 
                 <div class="irNav">
                     <a href="#irNav">
                         <i class="fa-solid fa-arrow-up">
                     </i></a>
-                </div>
+                </div>    
             </main>
-            <footer>
-                <ul>
-                    <li><p>©PNDXBR, 2022</p></li>
-                    <li><a href="../pages/contact.html">
-                        Contact
-                    </a></li>
-                    <li><a href="https://www.instagram.com/pndxbr.cvr/" target="_blank"> 
-                        <i class="fa-brands fa-instagram"></i>
-                    </a></li>
-                    <li><a href="https://www.behance.net/mauricioojeda" target="_blank"> 
-                        <i class="fa-brands fa-behance"></i>
-                    </a></li>
-                </ul>
+            <!-- footer-->
+            <footer class="bg-black text-whitesmoke">
+                <div class="container">
+                  <nav class="row">
+                        <ul class="list-unstyled justify-content-center">
+                            <li class="font-weight-bold text-uppercase">
+                                <p>©pndxbr, 2022</p>
+                            </li>
+                            <li class="font-weight-bold text-uppercase">
+                                <a href="../pages/contact.html">
+                                    Contact
+                                 </a>
+                            </li>
+                            <li><a href="https://www.instagram.com/pndxbr.cvr/"  target="_blank"> 
+                                <i class="fa-brands fa-instagram"></i>
+                            </a></li>
+                            <li><a href="https://www.behance.net/mauricioojeda" target="_blank"> 
+                                <i class="fa-brands fa-behance"></i>
+                            </a></li>
+                        </ul>
+                  </nav>
+                </div>
             </footer>
         </div>
-    </div>
+    </div> 
 </body>
 </html>

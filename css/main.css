@@ -4,9 +4,9 @@
     box-sizing: border-box;
 }
 /* inicio de css general  */
-.contentBody{
+.contentBody, .content-body{
     font-family:'Lato', sans-serif;
-    color: white;
+    color: whitesmoke
 }
 nav{
     display: flex;
@@ -26,10 +26,13 @@ nav ul li{
 }
 nav ul li a{
     font-weight: 100;
-    font-size: 0.7rem;
+    font-size: 0.8rem;
     text-decoration: none;
     text-transform: uppercase;
-    color: white;
+    color: whitesmoke;
+}
+nav ul li a:hover{
+    color: rgb(204, 221, 235);
 }
 footer{
     background-color: black;
@@ -38,21 +41,21 @@ footer{
 }
 footer ul li{
     list-style: none;
-    font-size: 0.7rem;
+    font-size: 1rem;
     display: inline-block;
     text-align: center;
     padding: 0.6rem;
 }
 footer ul li p{
-    color: white;
+    color: whitesmoke;
     margin-right: 1.5rem;
 }
 footer ul li a{
     text-decoration: none;
-    color: white;
+    color: whitesmoke;
 }
 footer ul li a:hover{
-    color: rgb(220, 237, 250);
+    color: rgb(204, 221, 235);
 }
 /* cierre de css general */
 /* inicio de index */
@@ -68,7 +71,7 @@ footer ul li a:hover{
 }
 /* cierre de index */
 /* inicio de características de section en las páginas*/
-.contentPages{
+.contentPages, .content-pages{
     background: rgb(8,0,140);
     background: linear-gradient(90deg, rgba(8,0,140,1) 0%, rgba(8,0,140,1) 46%, rgba(31,136,157,1) 100%);
 }
@@ -80,7 +83,7 @@ section div ul li{
 }
 section div ul li a{
     text-decoration: none;
-    color: white;
+    color: whitesmoke;
 }
 
 /* ciere de características de section en las páginas */
@@ -99,7 +102,7 @@ section div ul li a{
     display: flex;  
     justify-content: center;
     align-content: center;
-    border-bottom: 0.125rem solid white;
+    border-bottom: 0.125rem solid whitesmoke;
     margin-bottom: 3rem;
 }
 .mainAboutP {
@@ -115,7 +118,7 @@ section div ul li a{
 .mainArtist h1{
     font-size: 1.4rem;
     width: 85%;
-    border-bottom: 0.125rem solid white;
+    border-bottom: 0.125rem solid whitesmoke;
     text-transform: uppercase;
 }
 .artistList{
@@ -124,7 +127,7 @@ section div ul li a{
 .mainLabels h2{
     font-size: 1.4rem;
     width: 85%;
-    border-bottom: 0.125rem solid white;
+    border-bottom: 0.125rem solid whitesmoke;
     text-transform: uppercase;
 }
 section div ul{
@@ -140,31 +143,32 @@ section div ul{
     position: fixed;
     bottom: 0;
     right: 0;
-    height:60px;
-    width:60px;
+    height:3.75rem;
+    width:3.75rem;
     display: inline-block;
-    margin: 30px;
+    margin: 3rem;
     background-color: #173592;
-    border: 2px solid white;
-    border-radius: 30px;
+    border: 0.1rem solid #173592;
+    border-radius: 1.8rem;
     text-align: center;
-    transition: 0.2s;
+    transition: 0.3s;
 }
 .irNav:hover{
-    background-color: rgba(31,136,157,1) ;
+    background-color: #1e3e9e;
+    border: 0.1rem solid whitesmoke;
 }
 /* inicio de características de imagenes de las páginas Gallery y Store */
-.mainGallery img, main div img{
+.mainGallery img{
     transition: 0.5s;
 }
-.mainGallery img:hover, main div img:hover{
+.mainGallery img:hover{
     transform: scale(1.1);        
 }
 /* cierre de características de imagenes de las páginas Gallery y Store */
 .irNav a{
-    color: white;
+    color: whitesmoke;
     text-align: center;
-    font-size: 40px;
+    font-size: 2.5rem;
     font-weight: 100;
 }
 .irNav a i{
@@ -194,7 +198,7 @@ section div ul{
     margin: 1rem 3rem;
     width: 95%;
     padding-bottom: 0.5rem;
-    border-bottom:  0.125rem solid white;
+    border-bottom:  0.125rem solid whitesmoke;
 }
 .sectionGallery2{
     grid-area: sectionGallery2;
@@ -207,56 +211,33 @@ section div ul{
 }
 /* cierre de las caractéristicas da la página Gallery */
 /* inicio de carcterísticas de la página store */
-.mainStore{
-    display: grid;
-    grid-template-areas: 
-    "cvrStore1 cvrStore2 cvrStore3"
-    "cvrStore4 cvrStore5 cvrStore6";
-    margin: 2.5rem 0.7rem;
+.containter{
+    height: 100vh;
 }
-.cvrStore1{
-    grid-area: cvrStore1;
+.card{
+    background-color: black;
 }
-.cvrStore2{
-    grid-area: cvrStore2;
+.card-img-top{
+    padding: 0.5rem 0rem;
 }
-.cvrStore3{
-    grid-area: cvrStore3;
+.btn{
+    background-color: #173592;
+    border: 0.1rem solid #173592;
+    border-radius: 0.5rem;
+    transition: 0.3s;
 }
-.cvrStore4{
-    grid-area: cvrStore4;
-}
-.cvrStore5{
-    grid-area: cvrStore5;
-}
-.cvrStore6{
-    grid-area: cvrStore6;
-}
-.cvr{
-    margin: 2rem 1rem;
-    display: flex;
-    flex-direction: column;
-}
-.coverName{
-    font-weight: 900;
-    padding: 0.3rem 0rem;
-}
-.linkShop{
-    display: flex;
-    justify-content: space-between;
-    padding: 0.3rem;
-    border-top: 0.07rem  solid white;
-    border-bottom:  0.07rem solid white;
-    font-weight: 100;
-}
-.linkShop a{
-    text-decoration: none;
+.btn.btn-primary{
     text-transform: uppercase;
-    color: white
+}
+.btn.btn-primary:hover{
+    background-color: #1e3e9e;
+    border: 0.1rem solid whitesmoke;
+    border-radius: 0.5rem;
 }
 /* cierre de carcterísticas de la página store */
 /*inicio de características de la página contacto*/
 .mainContact{
+    height: 100vh;
     display: flex; 
     grid-template-areas: 
     "h1"
@@ -272,7 +253,7 @@ section div ul{
     text-align: center;
     width: 40rem;
     font-size: 3rem;
-    border-bottom: 0.125rem solid white;
+    border-bottom: 0.125rem solid whitesmoke;
 }
 /* inicio de formulario */
 form{
@@ -298,11 +279,11 @@ form div h3{
 }  
 .formBox input{
     background-color: #1e3e9e;
-    color: white;
+    color: whitesmoke;
     text-transform: uppercase;
     font-size: medium;
     padding: 0.4rem 1rem;
-    border: 0.125rem solid white;
+    border: 0.125rem solid whitesmoke;
 }
 /* cierre de formulario */
 /* media queries */
@@ -337,16 +318,6 @@ form div h3{
         margin: 1rem
     }
     /* cierre de características de la página About*/
-    /* inicio de características de la página Store*/
-    .mainStore{
-        display: grid;
-        grid-template-areas: 
-        "cvrStore1 cvrStore2"
-        "cvrStore3 cvrStore4"
-        "cvrStore5 cvrStore6";
-        margin: 2rem 1.5rem;
-    }
-     /* cierre de características de la página Store*/
 }    
 @media only screen and (max-width: 1024px) {
     /*inicio de características generales de las páginas*/
@@ -374,7 +345,7 @@ form div h3{
     }  
     .mainAboutImgP {
         flex-direction: column; 
-        border-bottom: 0.125rem solid white;
+        border-bottom: 0.125rem solid whitesmoke;
         align-items: center;
         align-content: center;
         margin-bottom: 0rem;
@@ -458,19 +429,6 @@ form div h3{
         width: 93%;
     }
     /* cierre de características de la página Gallery*/
-    /* inicio de características de la página Store*/
-    .mainStore{
-        display: grid;
-        grid-template-areas: 
-        "cvrStore1"
-        "cvrStore2"
-        "cvrStore3"
-        "cvrStore4"
-        "cvrStore5"
-        "cvrStore6";
-        margin: 2rem;
-    }
-    /* cierre de características de la página Store*/
     /* inicio de características de la página Contact*/
     .mainContact h1{
         text-align: center;
