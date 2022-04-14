@@ -89,6 +89,7 @@ section div ul li a{
 /* ciere de características de section en las páginas */
 /* Inicio de page about */
 .mainAbout {
+    height: 80vh;
     display: grid;
     grid-template-areas:
     "mainAboutImgP mainAboutImgP"
@@ -156,6 +157,22 @@ section div ul{
 .irNav:hover{
     background-color: #1e3e9e;
     border: 0.1rem solid whitesmoke;
+}
+.go-up{
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    height:3.75rem;
+    width:3.75rem;
+    margin: 3rem;
+    background-color: #173592;
+    border: 0.1rem solid #173592;
+    text-align: center;
+    transition: 0.3s;
+
+}
+.go-up i{
+    font-size: 1rem;
 }
 /* inicio de características de imagenes de las páginas Gallery y Store */
 .mainGallery img{
