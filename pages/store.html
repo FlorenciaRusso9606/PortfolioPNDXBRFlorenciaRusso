@@ -16,36 +16,31 @@
 <body>
     <div class="content-body">
         <div class="content-pages">
-            <header class="container">
-                <nav class="navbar navbar-expand-lg navbar-light" >
-                    <div class="container-fluid">
-                      <a class="navbar-brand" href="#"><img src="../img/pndxbrlogopngsmall.png" style="padding: 0rem;" alt=""></a>
-                      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                      </button>
-                      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                        <ul class="navbar-nav">
-                          <li class="nav-item">
-                              <a class="nav-link active  border-end" style="font-size: 0.8rem; color: whitesmoke; padding: 0rem 1.2rem 0rem 0rem;" aria-current="page" href="../index.html">Home</a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link border-end" style="font-size: 0.8rem; color: whitesmoke; padding: 0rem 1.2rem 0rem 0rem;" href="../pages/about.html">about</a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link border-end" style="font-size: 0.8rem; color: whitesmoke; padding: 0rem 1.2rem 0rem 0rem;" href="../pages/gallery.html">gallery</a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link  border-end" style="font-size: 0.8rem; color: whitesmoke; padding: 0rem 1.2rem 0rem 0rem;" href="../pages/store.html">store</a>
-                          </li>
-                          <li class="nav-item">
-                              <a class="nav-link" style="font-size: 0.8rem; color: whitesmoke; padding: 0rem;" href="../pages/contact.html">contact</a>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </nav>
+            <header>
+                <nav id="irNav">
+                    <a href="../index.html">
+                        <img class="logoA" src="../img/pndxbrlogopngsmall.png" alt="pndxbr logo">
+                    </a>
+                    <ul class="menu">
+                        <li class="navBar"><a href="../index.html">
+                            home
+                        </a></li>
+                        <li class="navBar"><a href="../pages/about.html">
+                            about
+                        </a></li>
+                        <li  class="navBar"><a href="../pages/gallery.html">
+                            gallery
+                        </a></li>
+                        <li class="navBar"><a href="../pages/store.html" class="selected">
+                            store
+                        </a></li>
+                        <li><a href="../pages/contact.html">
+                            contact
+                        </a></li>
+                    </ul>
+                </nav>
             </header>
-            <main class="container">
+            <main class="container-fluid">
                 <section class="row justify-content-around mb-4">
                     <div class="card col-4 mb-4" style="width: 23rem;">
                         <img src="../img/previews/cvrdsgn001.jpg" class="card-img-top" alt="cvrdsgn001">
@@ -98,11 +93,11 @@
                         </div>
                     </div>
                 </section>
-                <div class="d-grid gap-2 d-md-block">
-                    <button class="btn btn-primary go-up"href="#irNav" type="button">
-                        <i class="fa-solid fa-arrow-up" style="font-size: 2rem; color: whitesmoke"></i>
-                    </button>
-                  </div>
+                <div class="irNav">
+                    <a href="#irNav">
+                        <i class="fa-solid fa-arrow-up">
+                    </i></a>
+                </div>
             </main>
             <!-- footer-->
             <footer class="bg-black text-whitesmoke">
