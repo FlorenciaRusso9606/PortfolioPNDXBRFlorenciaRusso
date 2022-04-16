@@ -77,19 +77,21 @@ footer ul li a:hover{
 /* inicio de index */
 .contentIndex{
     background-image: url(../img/192.jpg);
-    height:100vh;
+    height: 100vh;
 }
 .mainIndex{
     display: flex;
     justify-content: center;
     align-content: center;
     padding: 4rem;
+    margin-top: 4rem;
 }
 /* cierre de index */
 /* inicio de características de section en las páginas*/
 .contentPages, .content-pages{
     background: rgb(8,0,140);
     background: linear-gradient(90deg, rgba(8,0,140,1) 0%, rgba(8,0,140,1) 46%, rgba(31,136,157,1) 100%);
+    height: 100vh;
 }
 section div ul li{
     list-style: none;
@@ -104,7 +106,6 @@ section div ul li a{
 /* ciere de características de section en las páginas */
 /* Inicio de page about */
 .mainAbout {
-    height: 80vh;
     display: grid;
     grid-template-areas:
     "mainAboutImgP mainAboutImgP"
@@ -115,11 +116,12 @@ section div ul li a{
 }  
 .mainAboutImgP {
     grid-area: mainAboutImgP;
+    padding-bottom: 0.5rem;
     display: flex;  
     justify-content: center;
     align-content: center;
     border-bottom: 0.125rem solid whitesmoke;
-    margin-bottom: 3rem;
+    margin-bottom: 4rem;
 }
 .mainAboutP {
     margin: 1.3rem;
@@ -236,19 +238,22 @@ section div ul{
 .card-img-top{
     padding: 0.5rem 0rem;
 }
-.btn{
+.estilos-card{
+    padding: 0.8rem 2rem;
+}
+.btn-estilos{
     background-color: #173592;
     border: 0.1rem solid #173592;
-    border-radius: 0.5rem;
     transition: 0.3s;
+    color: rgb(225, 221, 221);;;
 }
-.btn.btn-primary{
+.btn-estilos{
     text-transform: uppercase;
 }
-.btn.btn-primary:hover{
+.btn-estilos:hover{
     background-color: #1e3e9e;
     border: 0.1rem solid whitesmoke;
-    border-radius: 0.5rem;
+    color: whitesmoke;
 }
 /* cierre de carcterísticas de la página store */
 /*inicio de características de la página contacto*/
