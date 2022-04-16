@@ -159,6 +159,7 @@ section div ul{
 .mainLabels { 
     grid-area: mainLabels;
     margin-top: 3rem;
+    margin-bottom: 4.5rem;
 }
 /* inicio de boton para subir al nav, usado en gallery y en store */
 .irNav{
@@ -319,6 +320,7 @@ form div h3{
 /* cierre de formulario */
 /* media queries */
 @media only screen and (max-width: 1300px){
+
     /* inicio de características de la página About*/
     .mainAbout {
         display: grid;
