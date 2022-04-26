@@ -1,0 +1,27 @@
+@import "../utilities/vars";
+footer{
+    background-color: $color-fondo-footer;
+    display: flex;
+    justify-content: center;
+    ul{
+        li{
+            list-style: none;
+            font-size: 1rem;
+            display: inline-block;
+            text-align: center;
+            padding: 0.7rem;
+            p{
+                color: $color-secundario;
+                margin-right: 1.5rem;
+            }
+            a{
+                text-decoration: none;
+                color: $color-secundario;
+                &:hover{
+                    color: $color-principal;
+                }
+            }
+        }
+    } 
+    
+}

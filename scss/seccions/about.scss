@@ -1,0 +1,61 @@
+@import "../utilities/vars";
+@import "../base/base";
+.main-about {
+    display: grid;
+    grid-template-areas:
+    "mainAboutImgP mainAboutImgP"
+    "mainArtist mainLabels";
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr;
+    margin: 2rem;
+    .main-about-img-p{
+        grid-area: mainAboutImgP;
+        padding-bottom: 0.5rem;
+        display: flex;  
+        justify-content: center;
+        align-content: center;
+        border-bottom: 0.125rem solid $color-principal;
+        margin-bottom: 4rem;
+        .main-about-p{
+            margin: 1.3rem;
+            padding: 1.2rem 0rem;
+            font-size: 1.6rem;
+            line-height: 1.9rem;
+            font-weight: lighter;
+        }
+    }
+}
+.main-artist { 
+    grid-area: mainArtist;
+    margin-top: 3rem;
+    h1{
+        font-size: 1.4rem;
+        width: 85%;
+        border-bottom: 0.125rem solid $color-principal;
+        text-transform: uppercase;
+    }
+    .artist-list{
+        display: flex;  
+    }
+    div{
+        ul{
+             margin-top: 1rem;
+             margin-right: 3rem;
+        }
+    } 
+}
+.main-labels{
+    grid-area: mainLabels;
+    margin-top: 3rem;
+    margin-bottom: 4.5rem;
+    h2{
+        border-bottom: 0.125rem solid $color-principal;
+        text-transform: uppercase;
+    }
+    div{
+        ul{
+            margin-top: 1rem;
+            margin-right: 3rem;
+        }
+    }
+}  

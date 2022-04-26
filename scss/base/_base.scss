@@ -1,0 +1,40 @@
+@import"../utilities/vars";
+.content-body{
+    font-family:'Lato', sans-serif;
+    color:$color-principal;
+    .content-pages{
+        background: rgb(8,0,140);
+        background: linear-gradient(90deg, rgba(8,0,140,1) 0%, rgba(8,0,140,1) 46%, rgba(31,136,157,1) 100%);
+    }
+}
+section{
+    div{
+        ul{
+            li{
+                list-style: none;
+                padding: 0.3rem 0rem;
+                font-size: 1rem;
+                font-weight: lighter;
+                a{
+                    text-decoration: none;
+                    color: $color-principal;
+                }
+            }
+        }
+    }
+} 
+.btn-estilos{
+    background-color: $color-fondo-boton;
+    color: $color-secundario;
+    text-transform: uppercase;
+    font-size: medium;
+    padding: 0.4rem 1rem;
+    border: 0.125rem solid $color-secundario;
+    font-weight: 600;
+    transition: 0.3s;
+    width:5rem;
+    &:hover{
+        border: 0.125rem solid $color-principal;
+        color: whitesmoke;
+    }
+}
