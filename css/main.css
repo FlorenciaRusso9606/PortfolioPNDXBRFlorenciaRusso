@@ -1,14 +1,16 @@
+/*resets*/
 * {
   padding: 0;
   margin: 0;
   box-sizing: border-box; }
 
+/*base de la pagina*/
 .content-body {
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   color: whitesmoke; }
   .content-body .content-pages {
-    background: #08008c;
-    background: linear-gradient(90deg, #08008c 0%, #08008c 46%, #1f889d 100%); }
+    background: #6f45be;
+    background: linear-gradient(90deg, #6f45be 0%, #21169d 100%); }
 
 section div ul li {
   list-style: none;
@@ -19,24 +21,11 @@ section div ul li {
     text-decoration: none;
     color: whitesmoke; }
 
-.btn-estilos {
-  background-color: #1e3e9e;
-  color: #e1dddd;
-  text-transform: uppercase;
-  font-size: medium;
-  padding: 0.4rem 1rem;
-  border: 0.125rem solid #e1dddd;
-  font-weight: 600;
-  transition: 0.3s;
-  width: 5rem; }
-  .btn-estilos:hover {
-    border: 0.125rem solid whitesmoke;
-    color: whitesmoke; }
-
 footer {
   background-color: black;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  align-items: center; }
   footer ul li {
     list-style: none;
     font-size: 1rem;
@@ -71,6 +60,8 @@ nav {
         text-transform: uppercase;
         color: whitesmoke;
         position: relative; }
+        nav ul li a:hover {
+          color: whitesmoke; }
         nav ul li a:after {
           content: "";
           background-color: whitesmoke;
@@ -86,6 +77,7 @@ nav {
       nav ul li .selected:after {
         opacity: 0.9; }
 
+/*inicio de la pagina index*/
 .content-index {
   background-image: url(../img/192.jpg);
   height: 100vh; }
@@ -93,41 +85,13 @@ nav {
 .main-index {
   display: flex;
   justify-content: center;
-  align-content: center;
+  align-items: center;
   padding: 4rem; }
   .main-index img {
     width: 100%; }
 
-.content-body {
-  font-family: 'Lato', sans-serif;
-  color: whitesmoke; }
-  .content-body .content-pages {
-    background: #08008c;
-    background: linear-gradient(90deg, #08008c 0%, #08008c 46%, #1f889d 100%); }
-
-section div ul li {
-  list-style: none;
-  padding: 0.3rem 0rem;
-  font-size: 1rem;
-  font-weight: lighter; }
-  section div ul li a {
-    text-decoration: none;
-    color: whitesmoke; }
-
-.btn-estilos {
-  background-color: #1e3e9e;
-  color: #e1dddd;
-  text-transform: uppercase;
-  font-size: medium;
-  padding: 0.4rem 1rem;
-  border: 0.125rem solid #e1dddd;
-  font-weight: 600;
-  transition: 0.3s;
-  width: 5rem; }
-  .btn-estilos:hover {
-    border: 0.125rem solid whitesmoke;
-    color: whitesmoke; }
-
+/*fin de la pagina index*/
+/*inicio de la pagina about*/
 .main-about {
   display: grid;
   grid-template-areas: "mainAboutImgP mainAboutImgP" "mainArtist mainLabels";
@@ -139,13 +103,13 @@ section div ul li {
     padding-bottom: 0.5rem;
     display: flex;
     justify-content: center;
-    align-content: center;
+    align-items: center;
     border-bottom: 0.125rem solid whitesmoke;
     margin-bottom: 4rem; }
     .main-about .main-about-img-p .main-about-p {
       margin: 1.3rem;
       padding: 1.2rem 0rem;
-      font-size: 1.6rem;
+      font-size: 1.5rem;
       line-height: 1.9rem;
       font-weight: lighter; }
 
@@ -153,7 +117,7 @@ section div ul li {
   grid-area: mainArtist;
   margin-top: 3rem; }
   .main-artist h1 {
-    font-size: 1.4rem;
+    font-size: 1.5rem;
     width: 85%;
     border-bottom: 0.125rem solid whitesmoke;
     text-transform: uppercase; }
@@ -174,43 +138,96 @@ section div ul li {
     margin-top: 1rem;
     margin-right: 3rem; }
 
-.content-body {
-  font-family: 'Lato', sans-serif;
-  color: whitesmoke; }
-  .content-body .content-pages {
-    background: #08008c;
-    background: linear-gradient(90deg, #08008c 0%, #08008c 46%, #1f889d 100%); }
-
-section div ul li {
-  list-style: none;
-  padding: 0.3rem 0rem;
+/*fin de la pagina about*/
+/*inicio de la pagina gallery*/
+.ir-nav {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  display: inline-block;
+  margin: 1rem;
+  width: 4.5rem;
+  height: 4.5em;
   font-size: 1rem;
-  font-weight: lighter; }
-  section div ul li a {
-    text-decoration: none;
-    color: whitesmoke; }
+  border-radius: 3rem;
+  text-align: center;
+  padding: 2.5rem;
+  background-color: #173592;
+  border: 0.1rem solid #173592;
+  transition: 0.2s;
+  color: #e1dddd; }
+
+.main-gallery {
+  display: grid;
+  grid-template-areas: "section-gallery1 section-gallery1 section-gallery1" "section-gallery1 section-gallery1 section-gallery1" "section-gallery1 section-gallery1 section-gallery1" "section-gallery1 section-gallery1 section-gallery1" "section-gallery2 section-gallery2 section-gallery2" "section-gallery2 section-gallery2 section-gallery2" "section-gallery3 section-gallery3 section-gallery3" "section-gallery4 section-gallery4 section-gallery4"; }
+  .main-gallery h1, .main-gallery h2 {
+    width: 95%;
+    border-bottom: 0.125rem solid whitesmoke;
+    margin: 1rem 0.5rem 1rem 3rem;
+    padding-bottom: 0.5rem; }
+
+.section-gallery1 {
+  grid-area: section-gallery1; }
+
+.section-gallery2 {
+  grid-area: section-gallery2; }
+
+.section-gallery3 {
+  grid-area: section-gallery3; }
+
+.section-gallery4 {
+  grid-area: section-gallery4; }
+
+.gallery img {
+  margin: 2rem 3rem;
+  transition: 0.5s; }
+  .gallery img:hover {
+    transform: scale(1.1); }
+
+.ir-nav:hover {
+  background-color: #1e3e9e;
+  border: 0.1rem solid whitesmoke;
+  color: whitesmoke; }
+
+.ir-nav a {
+  color: whitesmoke;
+  text-align: center;
+  font-size: 3rem;
+  font-weight: 100; }
+  .ir-nav a i {
+    padding: 5px; }
+
+/*fin de la pagina gallery*/
+/*inicio de la pagina store*/
+.containter-fluid {
+  padding: 0.8rem 2rem; }
+
+.card {
+  background-color: black; }
+
+.card-img-top {
+  padding: 0.5rem 0rem; }
 
 .btn-estilos {
-  background-color: #1e3e9e;
+  background-color: #173592;
+  border: 0.1rem solid #173592;
+  transition: 0.2s;
   color: #e1dddd;
-  text-transform: uppercase;
-  font-size: medium;
-  padding: 0.4rem 1rem;
-  border: 0.125rem solid #e1dddd;
-  font-weight: 600;
-  transition: 0.3s;
-  width: 5rem; }
+  text-transform: uppercase; }
   .btn-estilos:hover {
-    border: 0.125rem solid whitesmoke;
+    background-color: #1e3e9e;
+    border: 0.1rem solid whitesmoke;
     color: whitesmoke; }
 
+/*fin de la pagina store*/
+/*inicio de la pagina contact*/
 .main-contact {
   height: 100vh;
   display: flex;
-  grid-template-areas: "h1" "form";
-  flex-direction: column;
   justify-content: center;
   align-items: center;
+  grid-template-areas: "h1" "form";
+  flex-direction: column;
   row-gap: 1rem; }
   .main-contact h1 {
     grid-area: h1;
@@ -239,3 +256,5 @@ section div ul li {
     .main-contact form .form-box input {
       margin: 0.4rem;
       padding: 0.2rem; }
+
+/*fin de la pagina contact*/

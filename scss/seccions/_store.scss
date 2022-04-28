@@ -1,0 +1,19 @@
+/*inicio de la pagina store*/
+@import "../utilities/mixins";
+.containter-fluid{
+    padding: 0.8rem 2rem;
+}
+.card{
+    background-color: map-get($map: $colores, $key: bg-black);
+}
+.card-img-top{
+    padding: 0.5rem 0rem;
+}
+.btn-estilos{
+    @include btn;
+    text-transform: uppercase;
+    &:hover{
+        @include btn-hover;
+    }
+}
+/*fin de la pagina store*/

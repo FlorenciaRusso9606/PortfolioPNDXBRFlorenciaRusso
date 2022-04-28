@@ -1,5 +1,5 @@
+/*inicio de la pagina about*/
 @import "../utilities/vars";
-@import "../base/base";
 .main-about {
     display: grid;
     grid-template-areas:
@@ -11,15 +11,13 @@
     .main-about-img-p{
         grid-area: mainAboutImgP;
         padding-bottom: 0.5rem;
-        display: flex;  
-        justify-content: center;
-        align-content: center;
-        border-bottom: 0.125rem solid $color-principal;
+        @include flex(center, center);
+        @include border-bottom;
         margin-bottom: 4rem;
         .main-about-p{
             margin: 1.3rem;
             padding: 1.2rem 0rem;
-            font-size: 1.6rem;
+            font-size: $text-medium-large;
             line-height: 1.9rem;
             font-weight: lighter;
         }
@@ -29,9 +27,9 @@
     grid-area: mainArtist;
     margin-top: 3rem;
     h1{
-        font-size: 1.4rem;
+        font-size: $text-medium-large;
         width: 85%;
-        border-bottom: 0.125rem solid $color-principal;
+        @include border-bottom;
         text-transform: uppercase;
     }
     .artist-list{
@@ -49,7 +47,7 @@
     margin-top: 3rem;
     margin-bottom: 4.5rem;
     h2{
-        border-bottom: 0.125rem solid $color-principal;
+        @include border-bottom;;
         text-transform: uppercase;
     }
     div{
@@ -58,4 +56,5 @@
             margin-right: 3rem;
         }
     }
-}  
+} 
+/*fin de la pagina about*/
