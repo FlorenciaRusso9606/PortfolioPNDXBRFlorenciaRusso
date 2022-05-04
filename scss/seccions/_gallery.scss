@@ -1,16 +1,7 @@
 /*inicio de la pagina gallery*/
 .main-gallery{
-    display: grid;
-    grid-template-areas:
-     "section-gallery1 section-gallery1 section-gallery1"
-     "section-gallery1 section-gallery1 section-gallery1"
-     "section-gallery1 section-gallery1 section-gallery1"
-     "section-gallery1 section-gallery1 section-gallery1"
-     "section-gallery2 section-gallery2 section-gallery2"
-     "section-gallery2 section-gallery2 section-gallery2"
-     "section-gallery3 section-gallery3 section-gallery3"
-     "section-gallery4 section-gallery4 section-gallery4";
-     h1{
+   h1{
+         grid-area: covers-title;
          width: ($widht-completo - 5);
          @include border-bottom;
          margin: 1rem 0.5rem 1rem 1rem;
@@ -21,25 +12,21 @@
         @include border-bottom;
         margin: 1rem 0.5rem 1rem 1rem;
         padding: 0.5rem 2rem;
-     }
-}
-.section-gallery1{
-    grid-area: section-gallery1;
-}
-.section-gallery2{
-    grid-area: section-gallery2;
-}
-.section-gallery3{
-    grid-area: section-gallery3;
-}
-.section-gallery4{
-    grid-area: section-gallery4;
-}
-.gallery img{
-    margin:2rem 3rem; 
-    transition: 0.5s;
-    &:hover{
-        transform: scale(1.1);
+     }  
+    .gallery{
+        .gallery-container{
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            grid-auto-flow: 28.125rem;
+            gap: 2rem;
+            padding: 2rem;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+        
     }
 }
 /*fin de la pagina gallery*/
