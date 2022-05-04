@@ -1,28 +1,27 @@
 @import "../utilities/vars";
-@import "../utilities/maps";
 @import "../utilities/mixins";
 footer{
-    background-color: map-get($map: $colores, $key: bg-black);
+    background-color: $bg-black;
     @include flex(center, center);
     ul{
-        li{
-            list-style: none;
-            font-size: $text-medium;
+        .derechos{
+            margin-right:1.5rem;
+            font-size: $text-small;
             display: inline-block;
+        }
+        li{
+            display: inline-block;
+            list-style: none;
+            font-size: $text-small;
             text-align: center;
-            padding: 0.7rem;
-            p{
-                color: map-get($map: $colores, $key: secund);
-                margin-right: 1.5rem;
-            }
+            padding: 1rem 0.7rem 0rem 0rem;
             a{
                 text-decoration: none;
-                color :map-get($map: $colores, $key: secund);
+                color : $color-secund;
                 &:hover{
-                    color: map-get($map: $colores, $key: primario);
+                    color: $color-primario;
                 }
             }
         }
-    } 
-    
+    }  
 }

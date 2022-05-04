@@ -1,0 +1,228 @@
+/*inicio de mediaqueries*/
+@import"../utilities/vars";
+@media only screen and (max-width: 1024px) {
+    section {
+        div{
+            ul{
+                margin-top: 1rem;
+                margin-right: 1rem;
+            }  
+        } 
+    }
+    .content-index{
+        header{
+            nav{
+                ul{
+                    .nav-bar{
+                        border-right: none;
+                    }
+                }
+            }
+        }
+        
+    }
+           
+    /*inicio de las características de la página about*/
+    .main-about {
+        display: grid;
+        grid-template-areas:
+        "main-about-img-p"
+        "main-artist "
+        "main-labels";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        margin:1rem;
+    }
+    /*fin de las características de la página about*/
+    /*inicio de las características de la página gallery*/
+    .main-gallery{
+        display: grid;
+        grid-template-areas:"section-gallery1"
+                            "section-gallery1"
+                            "section-gallery1"
+                            "section-gallery1"
+                            "section-gallery1"
+                            "section-gallery1"
+                            "section-gallery1"
+                            "section-gallery1"
+                            "section-gallery1"
+                            "section-gallery1"
+                            "section-gallery1"
+                            "section-gallery1"
+                            "section-gallery2"
+                            "section-gallery2"
+                            "section-gallery2"
+                            "section-gallery2"
+                            "section-gallery2"
+                            "section-gallery2"
+                            "section-gallery3"
+                            "section-gallery3"
+                            "section-gallery3"
+                            "section-gallery4"
+                            "section-gallery4"
+                            "section-gallery4";
+        .gallery{
+            h1{
+                margin: 0.5rem 2rem;
+                width: ($widht-completo - 7);
+            }
+            h2{
+                margin: 0.5rem 2rem;
+                width: ($widht-completo - 7);
+            }
+            img{
+                margin:2.5rem; 
+            }
+        } 
+    }
+    /*fin de las características de la página gallery*/
+     /* inicio de características de la página Contact*/
+    .main-contact{
+        height: 100vh;
+        h1{
+            text-align: center;
+            width: 25rem;
+            font-size: $text-large;
+        }
+        form{
+            padding: 1rem;
+            input{
+                margin: 0.4rem;
+                padding: 0.2rem;
+            }
+            h3{
+                margin: 0.4rem;
+                padding: 0.2rem;
+            }
+            .form-name-email{
+                input{
+                    width: 25rem;
+                    height: 2rem;
+                    font-size: 1rem;   
+                } 
+            }
+            .form-box{
+                @include flex (center, center);
+                flex-direction: column;
+                textarea{
+                    width: 25em;
+                    height: 20rem;
+                    font-size: $text-medium;
+                }
+            }
+        }
+    }
+    /* cierre de características de la página Contact */
+}
+
+@media only screen and (max-width: 768px) {
+    /* inicio de características de la página Gallery*/
+    .logo-b{
+        display: none;
+    }
+   .main-gallery{
+       .gallery{
+           display: flex;
+           flex-direction: column;
+           h1{
+                margin: 0.5rem 2rem;
+                width: ($widht-completo - 10);
+            }
+            h2{
+                margin: 0.5rem 2rem;
+                width: ($widht-completo - 10);
+            }
+            img{
+                margin:2rem;
+            } 
+        }
+    } 
+
+    .main-about {
+        display: grid;
+        grid-template-areas:
+        "main-about-img-p" 
+        "main-about-img-p"
+        "main-artist"
+        "main-labels";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        margin:1rem;
+        .main-artist {
+            h1{
+                width: $widht-completo ;
+            }
+            .artist-list{
+                display: grid;
+                grid-template-areas: "column1 column2"
+                "column3 column4"
+                "column5 column5" ;
+                .column1{
+                    grid-area: column1;
+                }
+                .column2{
+                    grid-area: column2;
+                }
+                .column3{
+                    grid-area: column3;
+                }
+                .column4{
+                    grid-area: column4;
+                }
+                .column5{
+                    grid-area: column5;
+                }
+            } 
+                div{
+                    ul{
+                        margin-top: 1rem;
+                        margin-right: 1.2rem;
+                        li{
+                            list-style: none;
+                            padding: 0.5rem 0rem;
+                            margin: 0rem;
+                        }
+                    }
+                }  
+            }
+        }
+        .main-labels{
+          h2{
+            width: $widht-completo ;
+            }
+            
+        }
+    }  
+    /* cierre de características de la página Gallery*/
+}
+@media only screen and (max-width: 480px) {
+    /*inicio de características generales de las páginas*/
+    .logo-b{
+        display: none;
+    }
+    /*cierre de características generales de las páginas*/
+    /* inicio de características de la página About*/
+    .main-about {
+        margin: 0.3rem;
+    }  
+    /* cierre de características de la página About*/
+    /* inicio de características de la página Gallery*/
+    .main-gallery {
+        .gallery{
+            img{
+                 margin:1rem;
+            }
+            h1{
+                margin: 0.5rem 1rem;
+                width: ($widht-completo - 5);
+            }
+            h2{
+                margin: 0.5rem 1rem;
+                width: ($widht-completo - 5);
+            } 
+        }
+        
+    }
+    /* cierre de características de la página Gallery*/
+}
+/* cierre de media queries*/ 

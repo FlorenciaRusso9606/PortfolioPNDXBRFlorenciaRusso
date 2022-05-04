@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*resets*/
 * {
   padding: 0;
@@ -12,13 +13,50 @@
     background: #6f45be;
     background: linear-gradient(90deg, #6f45be 0%, #21169d 100%); }
 
-section div ul li {
-  list-style: none;
-  padding: 0.3rem 0rem;
+.ir-nav {
+  position: fixed;
+  bottom: 2rem;
+  right: 1rem;
+  display: inline-block;
+  margin: 1rem;
+  width: 4.5rem;
+  height: 4.5em;
+  border-radius: 3rem;
   font-size: 1rem;
-  font-weight: lighter; }
-  section div ul li a {
-    text-decoration: none;
+  text-align: center;
+  background-color: #173592;
+  border: 0.1rem solid #cacaca;
+  transition: 0.2s;
+  color: #e1dddd; }
+  .ir-nav a {
+    color: whitesmoke;
+    text-align: center;
+    font-size: 3rem;
+    font-weight: 100; }
+    .ir-nav a i {
+      padding: 0.6rem; }
+  .ir-nav:hover {
+    background-color: #1e3e9e;
+    border: 0.1rem solid whitesmoke;
+    color: whitesmoke; }
+
+.btn-estilos {
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  width: 8rem;
+  height: 2.6rem;
+  border-radius: 0rem;
+  background-color: #173592;
+  border: 0.1rem solid #cacaca;
+  transition: 0.2s;
+  color: #e1dddd;
+  text-transform: uppercase;
+  padding: 0.5rem 1rem;
+  font-weight: 400; }
+  .btn-estilos:hover {
+    background-color: #1e3e9e;
+    border: 0.1rem solid whitesmoke;
     color: whitesmoke; }
 
 footer {
@@ -26,15 +64,16 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center; }
+  footer ul .derechos {
+    margin-right: 1.5rem;
+    font-size: 0.8rem;
+    display: inline-block; }
   footer ul li {
-    list-style: none;
-    font-size: 1rem;
     display: inline-block;
+    list-style: none;
+    font-size: 0.8rem;
     text-align: center;
-    padding: 0.7rem; }
-    footer ul li p {
-      color: #e1dddd;
-      margin-right: 1.5rem; }
+    padding: 1rem 0.7rem 0rem 0rem; }
     footer ul li a {
       text-decoration: none;
       color: #e1dddd; }
@@ -45,61 +84,62 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center; }
-  nav ul {
-    display: flex;
+  nav ul .nav-bar {
+    border-right: 0.07rem solid whitesmoke; }
+  nav ul li {
     list-style: none;
-    text-align: center; }
-    nav ul .nav-bar {
-      border-right: 0.07rem solid whitesmoke; }
-    nav ul li {
-      padding: 0.3rem 1.1rem; }
-      nav ul li a {
-        font-weight: 100;
-        font-size: 0.8rem;
-        text-decoration: none;
-        text-transform: uppercase;
-        color: whitesmoke;
-        position: relative; }
-        nav ul li a:hover {
-          color: whitesmoke; }
-        nav ul li a:after {
-          content: "";
-          background-color: whitesmoke;
-          position: absolute;
-          left: 0;
-          top: calc(100% + 0.125rem);
-          width: 100%;
-          height: 0.065rem;
-          opacity: 0;
-          transition: 0.3s; }
-        nav ul li a:hover::after {
-          opacity: 0.9; }
-      nav ul li .selected:after {
+    padding: 0.3rem 1.1rem; }
+    nav ul li a {
+      color: whitesmoke;
+      font-weight: 100;
+      font-size: 0.8rem;
+      text-decoration: none;
+      text-transform: uppercase;
+      position: relative; }
+      nav ul li a:hover {
+        color: whitesmoke; }
+      nav ul li a:after {
+        content: "";
+        background-color: whitesmoke;
+        position: absolute;
+        left: 0;
+        top: 100.125%;
+        width: 100%;
+        height: 0.065rem;
+        opacity: 0;
+        transition: 0.3s; }
+      nav ul li a:hover::after {
         opacity: 0.9; }
+    nav ul li .selected:after {
+      opacity: 0.9; }
 
 /*inicio de la pagina index*/
 .content-index {
-  background-image: url(../img/192.jpg);
-  height: 100vh; }
+  background-image: url(../img/192.jpg); }
 
 .main-index {
   display: flex;
-  justify-content: center;
+  justify-content: end;
   align-items: center;
-  padding: 4rem; }
-  .main-index img {
-    width: 100%; }
+  height: 80vh; }
+  .main-index div {
+    display: flex;
+    justify-content: center;
+    align-items: center; }
+    .main-index div img {
+      width: 50%;
+      height: 100%; }
 
 /*fin de la pagina index*/
 /*inicio de la pagina about*/
 .main-about {
   display: grid;
-  grid-template-areas: "mainAboutImgP mainAboutImgP" "mainArtist mainLabels";
+  grid-template-areas: "main-about-img-p main-about-img-p" "main-artist main-labels" "main-artist main-labels";
   grid-template-columns: 3fr 1fr;
   grid-template-rows: 1fr 1fr;
-  margin: 2rem; }
+  margin: 1rem; }
   .main-about .main-about-img-p {
-    grid-area: mainAboutImgP;
+    grid-area: main-about-img-p;
     padding-bottom: 0.5rem;
     display: flex;
     justify-content: center;
@@ -112,59 +152,57 @@ nav {
       font-size: 1.5rem;
       line-height: 1.9rem;
       font-weight: lighter; }
-
-.main-artist {
-  grid-area: mainArtist;
-  margin-top: 3rem; }
-  .main-artist h1 {
-    font-size: 1.5rem;
-    width: 85%;
-    border-bottom: 0.125rem solid whitesmoke;
-    text-transform: uppercase; }
-  .main-artist .artist-list {
-    display: flex; }
-  .main-artist div ul {
-    margin-top: 1rem;
-    margin-right: 3rem; }
-
-.main-labels {
-  grid-area: mainLabels;
-  margin-top: 3rem;
-  margin-bottom: 4.5rem; }
-  .main-labels h2 {
-    border-bottom: 0.125rem solid whitesmoke;
-    text-transform: uppercase; }
-  .main-labels div ul {
-    margin-top: 1rem;
-    margin-right: 3rem; }
+  .main-about .main-artist {
+    grid-area: main-artist;
+    margin-top: 3rem;
+    margin-right: 2rem;
+    margin-bottom: 4.5rem; }
+    .main-about .main-artist h1 {
+      padding-left: 1.2rem;
+      font-size: 1.5rem;
+      width: 97%;
+      border-bottom: 0.125rem solid whitesmoke;
+      text-transform: uppercase; }
+    .main-about .main-artist .artist-list {
+      display: flex; }
+      .main-about .main-artist .artist-list div ul {
+        margin-top: 1rem;
+        margin-right: 1.2rem; }
+        .main-about .main-artist .artist-list div ul li {
+          list-style: none;
+          padding: 0.5rem 0rem;
+          margin: 0rem; }
+  .main-about .main-labels {
+    grid-area: main-labels;
+    margin-top: 3rem;
+    margin-bottom: 4.5rem; }
+    .main-about .main-labels h2 {
+      padding-left: 1.2rem;
+      border-bottom: 0.125rem solid whitesmoke;
+      text-transform: uppercase;
+      font-size: 1.5rem; }
+    .main-about .main-labels div ul {
+      margin-top: 1.2rem; }
+      .main-about .main-labels div ul li {
+        list-style: none;
+        padding: 0.5rem 0rem;
+        margin: 0rem; }
 
 /*fin de la pagina about*/
 /*inicio de la pagina gallery*/
-.ir-nav {
-  position: fixed;
-  bottom: 0;
-  right: 0;
-  display: inline-block;
-  margin: 1rem;
-  width: 4.5rem;
-  height: 4.5em;
-  font-size: 1rem;
-  border-radius: 3rem;
-  text-align: center;
-  padding: 2.5rem;
-  background-color: #173592;
-  border: 0.1rem solid #173592;
-  transition: 0.2s;
-  color: #e1dddd; }
-
 .main-gallery {
   display: grid;
   grid-template-areas: "section-gallery1 section-gallery1 section-gallery1" "section-gallery1 section-gallery1 section-gallery1" "section-gallery1 section-gallery1 section-gallery1" "section-gallery1 section-gallery1 section-gallery1" "section-gallery2 section-gallery2 section-gallery2" "section-gallery2 section-gallery2 section-gallery2" "section-gallery3 section-gallery3 section-gallery3" "section-gallery4 section-gallery4 section-gallery4"; }
-  .main-gallery h1, .main-gallery h2 {
+  .main-gallery h1 {
     width: 95%;
     border-bottom: 0.125rem solid whitesmoke;
-    margin: 1rem 0.5rem 1rem 3rem;
-    padding-bottom: 0.5rem; }
+    margin: 1rem 0.5rem 1rem 1rem;
+    padding: 0.5rem 2rem; }
+  .main-gallery h2 {
+    width: 95%;
+    border-bottom: 0.125rem solid whitesmoke;
+    margin: 1rem 0.5rem 1rem 1rem;
+    padding: 0.5rem 2rem; }
 
 .section-gallery1 {
   grid-area: section-gallery1; }
@@ -184,40 +222,16 @@ nav {
   .gallery img:hover {
     transform: scale(1.1); }
 
-.ir-nav:hover {
-  background-color: #1e3e9e;
-  border: 0.1rem solid whitesmoke;
-  color: whitesmoke; }
-
-.ir-nav a {
-  color: whitesmoke;
-  text-align: center;
-  font-size: 3rem;
-  font-weight: 100; }
-  .ir-nav a i {
-    padding: 5px; }
-
 /*fin de la pagina gallery*/
 /*inicio de la pagina store*/
-.containter-fluid {
+.main-store {
   padding: 0.8rem 2rem; }
-
-.card {
-  background-color: black; }
-
-.card-img-top {
-  padding: 0.5rem 0rem; }
-
-.btn-estilos {
-  background-color: #173592;
-  border: 0.1rem solid #173592;
-  transition: 0.2s;
-  color: #e1dddd;
-  text-transform: uppercase; }
-  .btn-estilos:hover {
-    background-color: #1e3e9e;
-    border: 0.1rem solid whitesmoke;
-    color: whitesmoke; }
+  .main-store .card-store {
+    background-color: black; }
+    .main-store .card-store .card-img-top {
+      padding: 0.5rem 0rem; }
+    .main-store .card-store .btn {
+      font-size: 0.8rem; }
 
 /*fin de la pagina store*/
 /*inicio de la pagina contact*/
@@ -228,7 +242,8 @@ nav {
   align-items: center;
   grid-template-areas: "h1" "form";
   flex-direction: column;
-  row-gap: 1rem; }
+  row-gap: 1rem;
+  margin: 4rem; }
   .main-contact h1 {
     grid-area: h1;
     display: inline-block;
@@ -238,12 +253,17 @@ nav {
     border-bottom: 0.125rem solid whitesmoke; }
   .main-contact form {
     grid-area: form;
-    padding: 1rem; }
+    padding: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
     .main-contact form .form-name-email input {
       margin: 0.4rem;
       padding: 0.2rem;
       width: 31rem; }
     .main-contact form .form-box h3 {
+      text-align: center;
       margin: 0.4rem;
       padding: 0.2rem;
       font-size: 1.5rem; }
@@ -258,3 +278,193 @@ nav {
       padding: 0.2rem; }
 
 /*fin de la pagina contact*/
+/*inicio de mediaqueries*/
+@media only screen and (max-width: 1024px) {
+  section div ul {
+    margin-top: 1rem;
+    margin-right: 1rem; }
+  .content-index header nav ul .nav-bar {
+    border-right: none; }
+  /*inicio de las características de la página about*/
+  .main-about {
+    display: grid;
+    grid-template-areas: "main-about-img-p" "main-artist " "main-labels";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    margin: 1rem; }
+  /*fin de las características de la página about*/
+  /*inicio de las características de la página gallery*/
+  .main-gallery {
+    display: grid;
+    grid-template-areas: "section-gallery1" "section-gallery1" "section-gallery1" "section-gallery1" "section-gallery1" "section-gallery1" "section-gallery1" "section-gallery1" "section-gallery1" "section-gallery1" "section-gallery1" "section-gallery1" "section-gallery2" "section-gallery2" "section-gallery2" "section-gallery2" "section-gallery2" "section-gallery2" "section-gallery3" "section-gallery3" "section-gallery3" "section-gallery4" "section-gallery4" "section-gallery4"; }
+    .main-gallery .gallery h1 {
+      margin: 0.5rem 2rem;
+      width: 93%; }
+    .main-gallery .gallery h2 {
+      margin: 0.5rem 2rem;
+      width: 93%; }
+    .main-gallery .gallery img {
+      margin: 2.5rem; }
+  /*fin de las características de la página gallery*/
+  /* inicio de características de la página Contact*/
+  .main-contact {
+    height: 100vh; }
+    .main-contact h1 {
+      text-align: center;
+      width: 25rem;
+      font-size: 2rem; }
+    .main-contact form {
+      padding: 1rem; }
+      .main-contact form input {
+        margin: 0.4rem;
+        padding: 0.2rem; }
+      .main-contact form h3 {
+        margin: 0.4rem;
+        padding: 0.2rem; }
+      .main-contact form .form-name-email input {
+        width: 25rem;
+        height: 2rem;
+        font-size: 1rem; }
+      .main-contact form .form-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column; }
+        .main-contact form .form-box textarea {
+          width: 25em;
+          height: 20rem;
+          font-size: 1rem; }
+  /* cierre de características de la página Contact */ }
+
+@media only screen and (max-width: 768px) {
+  /* inicio de características de la página Gallery*/
+  .logo-b {
+    display: none; }
+  .main-about {
+    display: grid;
+    grid-template-areas: "main-about-img-p"  "main-about-img-p" "main-artist" "main-labels";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    margin: 1rem; }
+    .main-about .main-about-img-p {
+      flex-direction: column;
+      border-bottom: 0.125rem solid whitesmoke;
+      align-items: center;
+      align-content: center;
+      margin-bottom: 0rem;
+      width: 97%;
+      margin-bottom: 1rem; }
+      .main-about .main-about-img-p .main-about-img {
+        width: 50%;
+        align-self: center; }
+      .main-about .main-about-img-p .main-about-p {
+        margin: 1.3rem;
+        padding: 1.2rem 0rem;
+        font-size: 1.2rem;
+        line-height: 1.5rem; }
+  .main-artist h1 {
+    width: 100%; }
+  .main-artist .artist-list {
+    display: grid;
+    grid-template-areas: "column1 column2" "column3 column4" "column5 column5"; }
+    .main-artist .artist-list .column1 {
+      grid-area: column1; }
+    .main-artist .artist-list .column2 {
+      grid-area: column2; }
+    .main-artist .artist-list .column3 {
+      grid-area: column3; }
+    .main-artist .artist-list .column4 {
+      grid-area: column4; }
+    .main-artist .artist-list .column5 {
+      grid-area: column5; }
+  .main-labels h2 {
+    width: 100%; }
+  .main-gallery .gallery {
+    display: flex;
+    flex-direction: column; }
+    .main-gallery .gallery h1 {
+      margin: 0.5rem 2rem;
+      width: 90%; }
+    .main-gallery .gallery h2 {
+      margin: 0.5rem 2rem;
+      width: 90%; }
+    .main-gallery .gallery img {
+      margin: 2rem; }
+  .main-about {
+    display: grid;
+    grid-template-areas: "main-about-img-p"  "main-about-img-p" "main-artist" "main-labels";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    margin: 1rem; }
+    .main-about .main-about-img-p {
+      grid-area: main-about-img-p;
+      padding-bottom: 0.5rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-bottom: 0.125rem solid whitesmoke;
+      margin-bottom: 4rem; }
+      .main-about .main-about-img-p .main-about-p {
+        margin: 1.3rem;
+        padding: 1.2rem 0rem;
+        font-size: 1.5rem;
+        line-height: 1.9rem;
+        font-weight: lighter; }
+    .main-about .main-artist {
+      grid-area: main-artist;
+      margin-top: 3rem;
+      margin-right: 2rem;
+      margin-bottom: 4.5rem; }
+      .main-about .main-artist h1 {
+        padding-left: 1.2rem;
+        font-size: 1.5rem;
+        width: 97%;
+        border-bottom: 0.125rem solid whitesmoke;
+        text-transform: uppercase; }
+      .main-about .main-artist .artist-list {
+        display: flex; }
+        .main-about .main-artist .artist-list div ul {
+          margin-top: 1rem;
+          margin-right: 1.2rem; }
+          .main-about .main-artist .artist-list div ul li {
+            list-style: none;
+            padding: 0.5rem 0rem;
+            margin: 0rem; }
+    .main-about .main-labels {
+      grid-area: main-labels;
+      margin-top: 3rem;
+      margin-bottom: 4.5rem; }
+      .main-about .main-labels h2 {
+        padding-left: 1.2rem;
+        border-bottom: 0.125rem solid whitesmoke;
+        text-transform: uppercase;
+        font-size: 1.5rem; }
+      .main-about .main-labels div ul {
+        margin-top: 1.2rem; }
+        .main-about .main-labels div ul li {
+          list-style: none;
+          padding: 0.5rem 0rem;
+          margin: 0rem; }
+  /* cierre de características de la página Gallery*/ }
+
+@media only screen and (max-width: 480px) {
+  /*inicio de características generales de las páginas*/
+  .logo-b {
+    display: none; }
+  /*cierre de características generales de las páginas*/
+  /* inicio de características de la página About*/
+  .main-about {
+    margin: 0.3rem; }
+  /* cierre de características de la página About*/
+  /* inicio de características de la página Gallery*/
+  .main-gallery .gallery img {
+    margin: 1rem; }
+  .main-gallery .gallery h1 {
+    margin: 0.5rem 1rem;
+    width: 95%; }
+  .main-gallery .gallery h2 {
+    margin: 0.5rem 1rem;
+    width: 95%; }
+  /* cierre de características de la página Gallery*/ }
+
+/* cierre de media queries*/

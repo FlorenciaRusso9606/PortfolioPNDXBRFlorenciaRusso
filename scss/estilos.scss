@@ -3,10 +3,10 @@
 @import "layout/footer";
 @import "layout/header";
 @import "seccions/index";
-@import "utilities/maps";
-@import "utilities/mixins";
 @import "utilities/vars";
+@import "utilities/mixins";
 @import "seccions/about";
 @import "seccions/gallery";
 @import "seccions/store";
 @import "seccions/contact";
+@import "base/mediaqueries";

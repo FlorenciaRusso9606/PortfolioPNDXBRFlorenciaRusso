@@ -3,13 +3,14 @@
 .main-about {
     display: grid;
     grid-template-areas:
-    "mainAboutImgP mainAboutImgP"
-    "mainArtist mainLabels";
+    "main-about-img-p main-about-img-p"
+    "main-artist main-labels"
+    "main-artist main-labels";
     grid-template-columns: 3fr 1fr;
     grid-template-rows: 1fr 1fr;
-    margin: 2rem;
+    margin:1rem;
     .main-about-img-p{
-        grid-area: mainAboutImgP;
+        grid-area: main-about-img-p;
         padding-bottom: 0.5rem;
         @include flex(center, center);
         @include border-bottom;
@@ -22,39 +23,53 @@
             font-weight: lighter;
         }
     }
-}
-.main-artist { 
-    grid-area: mainArtist;
-    margin-top: 3rem;
-    h1{
-        font-size: $text-medium-large;
-        width: 85%;
-        @include border-bottom;
-        text-transform: uppercase;
-    }
-    .artist-list{
-        display: flex;  
-    }
-    div{
-        ul{
-             margin-top: 1rem;
-             margin-right: 3rem;
+    .main-artist { 
+        grid-area: main-artist;
+        margin-top: 3rem;
+        margin-right: 2rem;
+        margin-bottom: 4.5rem;
+        h1{
+            padding-left: 1.2rem;
+            font-size: $text-medium-large;
+            width: $widht-completo - 3;
+            @include border-bottom;
+            text-transform: uppercase;
         }
-    } 
-}
-.main-labels{
-    grid-area: mainLabels;
-    margin-top: 3rem;
-    margin-bottom: 4.5rem;
-    h2{
-        @include border-bottom;;
-        text-transform: uppercase;
-    }
-    div{
-        ul{
-            margin-top: 1rem;
-            margin-right: 3rem;
+        .artist-list{
+            display: flex; 
+            div{
+                ul{
+                    margin-top: 1rem;
+                    margin-right: 1.2rem;
+                    li{
+                        list-style: none;
+                        padding: 0.5rem 0rem;
+                        margin: 0rem;
+                    }
+                }
+            }  
         }
     }
-} 
+    .main-labels{
+        grid-area: main-labels;
+        margin-top: 3rem;
+        margin-bottom: 4.5rem;
+        h2{
+            padding-left: 1.2rem;
+            @include border-bottom;;
+            text-transform: uppercase;
+            font-size: $text-medium-large;
+        }
+        div{
+            ul{
+                margin-top: 1.2rem;
+                li{
+                    list-style: none;
+                    padding: 0.5rem 0rem;
+                    margin: 0rem;
+                }
+            }
+        }
+    }
+}
 /*fin de la pagina about*/

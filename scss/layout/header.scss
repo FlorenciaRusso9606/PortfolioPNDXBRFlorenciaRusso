@@ -1,35 +1,31 @@
 @import "../utilities/mixins";
-@import "../utilities/maps";
 @import "../utilities/vars";
-
 nav{
     @include flex(space-between, center);
     ul{
-        display: flex;
-        list-style: none;
-        text-align: center;
         .nav-bar{
-            border-right: 0.07rem solid map-get($map: $colores, $key: primario);
+            border-right: 0.07rem solid $color-primario;
         }
         li{
-            padding: 0.3rem 1.1rem;;
+            list-style: none;
+            padding: 0.3rem 1.1rem;
             a{
+                color: $color-primario;
                 font-weight: 100;
                 font-size: $text-small;
                 text-decoration: none;
                 text-transform: uppercase;
-                color: map-get($map: $colores, $key: primario);
                 position: relative;
                 &:hover{
-                    color: map-get($map: $colores, $key: primario);
+                    color: $color-primario;
                 }
                 &:after{
                     content: "";
-                    background-color: map-get($map: $colores, $key: primario);
+                    background-color: $color-primario;
                     position: absolute;
                     left:0;
-                    top: calc(100% + 0.125rem);
-                    width: 100%;
+                    top: ($widht-completo+ 0.125);
+                    width: $widht-completo;
                     height: 0.065rem;
                     opacity: 0;
                     transition: 0.3s;

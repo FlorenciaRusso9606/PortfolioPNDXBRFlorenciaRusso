@@ -1,13 +1,17 @@
 /*inicio de la pagina index*/
 .content-index{
     background-image: url(../img/192.jpg);
-    height: 100vh;
 }
 .main-index{
-   @include flex(center, center);
-    padding: 4rem;
-    img{
-        width: $widht-completo;
+    @include flex(end, center);
+    height: 80vh;
+   div{
+       @include flex(center, center);
+        img{
+           width: $widht-completo - 50;
+            height:100%;
+        }
     }
 }
+   
 /*fin de la pagina index*/

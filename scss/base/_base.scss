@@ -1,27 +1,47 @@
 /*base de la pagina*/
-@import "../utilities/maps";
+@import "../utilities/mixins";
 @import"../utilities/vars";
 .content-body{
     font-family: $font-principal;
-    color: map-get($map: $colores, $key: primario);
+    color: $color-primario;
     .content-pages{
-        background: map-get($map: $colores, $key: bg-pages);
+        background: $bg-pages;
         background:  linear-gradient(90deg, rgba(111,69,190,1) 0%, rgba(33,22,157,1) 100%);
     }
 }
-section{
-    div{
-        ul{
-            li{
-                list-style: none;
-                padding: 0.3rem 0rem;
-                font-size: $text-medium;
-                font-weight: lighter;
-                a{
-                    text-decoration: none;
-                    color: map-get($map: $colores, $key: primario);
-                }
-            }
+.ir-nav {
+    position: fixed;
+    bottom: 2rem;
+    right: 1rem;
+    display: inline-block;
+    margin: 1rem;
+    @include btn-size (4.5rem, 4.5em, 3rem);
+    font-size: $text-medium;
+    text-align: center;
+    @include btn;
+    a{
+        color: $color-primario;
+        text-align: center;
+        font-size: $subtitle;
+        font-weight: 100;
+        i{
+            padding: 0.6rem;
         }
     }
-} 
+    &:hover{
+        @include btn-hover;
+    }
+}
+.btn-estilos{
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    @include btn-size(8rem, 2.6rem, 0rem);
+    @include btn;
+    text-transform: uppercase;
+    padding: 0.5rem 1rem;
+    font-weight: 400;    
+    &:hover{
+        @include btn-hover;
+    }
+}

@@ -1,4 +1,5 @@
 /*inicio de la pagina contact*/
+@import "../utilities/mixins";
 .main-contact{
     height: 100vh;
     @include flex(center, center);
@@ -7,6 +8,7 @@
     "form";
     flex-direction: column;
     row-gap: 1rem;
+    margin: 4rem;
     h1{
         grid-area: h1;
         display: inline-block;
@@ -18,6 +20,8 @@
     form{
         grid-area: form;
         padding: 1rem;
+        @include flex(center, center);
+        flex-direction:column;
         .form-name-email{
             input{
                 margin: 0.4rem;
@@ -27,6 +31,7 @@
         }
         .form-box{
             h3{
+                text-align: center;
                 margin: 0.4rem;
                 padding: 0.2rem;
                 font-size: $text-medium-large;
@@ -41,6 +46,7 @@
             input{
                 margin: 0.4rem;
                 padding: 0.2rem;
+                
             }
         } 
     }

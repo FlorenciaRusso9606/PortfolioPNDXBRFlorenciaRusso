@@ -1,19 +1,15 @@
 /*inicio de la pagina store*/
-@import "../utilities/mixins";
-.containter-fluid{
+@import "../utilities/vars";
+.main-store{
     padding: 0.8rem 2rem;
-}
-.card{
-    background-color: map-get($map: $colores, $key: bg-black);
-}
-.card-img-top{
-    padding: 0.5rem 0rem;
-}
-.btn-estilos{
-    @include btn;
-    text-transform: uppercase;
-    &:hover{
-        @include btn-hover;
+    .card-store{
+        background-color: $bg-black;
+        .card-img-top{
+            padding: 0.5rem 0rem;
+        }
+        .btn{
+            font-size: $text-small;
+        }
     }
 }
 /*fin de la pagina store*/
