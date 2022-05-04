@@ -15,7 +15,7 @@
 
 .ir-nav {
   position: fixed;
-  bottom: 2rem;
+  bottom: 2.5rem;
   right: 1rem;
   display: inline-block;
   margin: 1rem;
@@ -167,11 +167,11 @@ nav {
       display: flex; }
       .main-about .main-artist .artist-list div ul {
         margin-top: 1rem;
-        margin-right: 1.2rem; }
+        margin-right: 1.2rem;
+        margin-bottom: 2rem; }
         .main-about .main-artist .artist-list div ul li {
           list-style: none;
-          padding: 0.5rem 0rem;
-          margin: 0rem; }
+          padding: 0.5rem 0rem; }
   .main-about .main-labels {
     grid-area: main-labels;
     margin-top: 3rem;
@@ -279,6 +279,37 @@ nav {
 
 /*fin de la pagina contact*/
 /*inicio de mediaqueries*/
+@media only screen and (max-width: 1200px) {
+  /*inicio de las características de la página about*/
+  .main-about {
+    display: grid;
+    grid-template-areas: "main-about-img-p"  "main-about-img-p" "main-artist" "main-labels";
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    margin: 1rem; }
+    .main-about .main-about-img-p {
+      flex-direction: column; }
+    .main-about .main-artist h1 {
+      width: 100%; }
+    .main-about .main-artist .artist-list {
+      display: grid;
+      grid-template-areas: "column1 column2 column3" "column4 column5 column5"; }
+      .main-about .main-artist .artist-list .column1 {
+        grid-area: column1; }
+      .main-about .main-artist .artist-list .column2 {
+        grid-area: column2; }
+      .main-about .main-artist .artist-list .column3 {
+        grid-area: column3; }
+      .main-about .main-artist .artist-list .column4 {
+        grid-area: column4; }
+      .main-about .main-artist .artist-list .column5 {
+        grid-area: column5; }
+    .main-about .main-labels {
+      margin: 1rem; }
+      .main-about .main-labels h2 {
+        width: 100%; }
+  /*fin de las características de la página about*/ }
+
 @media only screen and (max-width: 1024px) {
   section div ul {
     margin-top: 1rem;
@@ -336,10 +367,22 @@ nav {
           font-size: 1rem; }
   /* cierre de características de la página Contact */ }
 
+@media only screen and (max-width: 992px) {
+  /* inicio de características del header*/
+  nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center; }
+    nav ul .nav-bar {
+      border-right: none; }
+  /* cierre de características del header*/ }
+
 @media only screen and (max-width: 768px) {
-  /* inicio de características de la página Gallery*/
+  /* inicio de características de la página Index*/
   .logo-b {
     display: none; }
+  /* cierre de características de la página Index*
+     /* inicio de características de la página About*/
   .main-about {
     display: grid;
     grid-template-areas: "main-about-img-p"  "main-about-img-p" "main-artist" "main-labels";
@@ -347,38 +390,28 @@ nav {
     grid-template-rows: 1fr;
     margin: 1rem; }
     .main-about .main-about-img-p {
-      flex-direction: column;
-      border-bottom: 0.125rem solid whitesmoke;
-      align-items: center;
-      align-content: center;
-      margin-bottom: 0rem;
-      width: 97%;
-      margin-bottom: 1rem; }
-      .main-about .main-about-img-p .main-about-img {
-        width: 50%;
-        align-self: center; }
-      .main-about .main-about-img-p .main-about-p {
-        margin: 1.3rem;
-        padding: 1.2rem 0rem;
-        font-size: 1.2rem;
-        line-height: 1.5rem; }
-  .main-artist h1 {
-    width: 100%; }
-  .main-artist .artist-list {
-    display: grid;
-    grid-template-areas: "column1 column2" "column3 column4" "column5 column5"; }
-    .main-artist .artist-list .column1 {
-      grid-area: column1; }
-    .main-artist .artist-list .column2 {
-      grid-area: column2; }
-    .main-artist .artist-list .column3 {
-      grid-area: column3; }
-    .main-artist .artist-list .column4 {
-      grid-area: column4; }
-    .main-artist .artist-list .column5 {
-      grid-area: column5; }
-  .main-labels h2 {
-    width: 100%; }
+      flex-direction: column; }
+    .main-about .main-artist h1 {
+      width: 100%; }
+    .main-about .main-artist .artist-list {
+      display: grid;
+      grid-template-areas: "column1 column2" "column3 column4" "column5 column5"; }
+      .main-about .main-artist .artist-list .column1 {
+        grid-area: column1; }
+      .main-about .main-artist .artist-list .column2 {
+        grid-area: column2; }
+      .main-about .main-artist .artist-list .column3 {
+        grid-area: column3; }
+      .main-about .main-artist .artist-list .column4 {
+        grid-area: column4; }
+      .main-about .main-artist .artist-list .column5 {
+        grid-area: column5; }
+    .main-about .main-labels {
+      margin: 1rem; }
+      .main-about .main-labels h2 {
+        width: 100%; }
+  /* cierre de características de la página About*/
+  /* inicio de características de la página Gallery*/
   .main-gallery .gallery {
     display: flex;
     flex-direction: column; }
@@ -390,61 +423,6 @@ nav {
       width: 90%; }
     .main-gallery .gallery img {
       margin: 2rem; }
-  .main-about {
-    display: grid;
-    grid-template-areas: "main-about-img-p"  "main-about-img-p" "main-artist" "main-labels";
-    grid-template-columns: 1fr;
-    grid-template-rows: 1fr;
-    margin: 1rem; }
-    .main-about .main-about-img-p {
-      grid-area: main-about-img-p;
-      padding-bottom: 0.5rem;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-bottom: 0.125rem solid whitesmoke;
-      margin-bottom: 4rem; }
-      .main-about .main-about-img-p .main-about-p {
-        margin: 1.3rem;
-        padding: 1.2rem 0rem;
-        font-size: 1.5rem;
-        line-height: 1.9rem;
-        font-weight: lighter; }
-    .main-about .main-artist {
-      grid-area: main-artist;
-      margin-top: 3rem;
-      margin-right: 2rem;
-      margin-bottom: 4.5rem; }
-      .main-about .main-artist h1 {
-        padding-left: 1.2rem;
-        font-size: 1.5rem;
-        width: 97%;
-        border-bottom: 0.125rem solid whitesmoke;
-        text-transform: uppercase; }
-      .main-about .main-artist .artist-list {
-        display: flex; }
-        .main-about .main-artist .artist-list div ul {
-          margin-top: 1rem;
-          margin-right: 1.2rem; }
-          .main-about .main-artist .artist-list div ul li {
-            list-style: none;
-            padding: 0.5rem 0rem;
-            margin: 0rem; }
-    .main-about .main-labels {
-      grid-area: main-labels;
-      margin-top: 3rem;
-      margin-bottom: 4.5rem; }
-      .main-about .main-labels h2 {
-        padding-left: 1.2rem;
-        border-bottom: 0.125rem solid whitesmoke;
-        text-transform: uppercase;
-        font-size: 1.5rem; }
-      .main-about .main-labels div ul {
-        margin-top: 1.2rem; }
-        .main-about .main-labels div ul li {
-          list-style: none;
-          padding: 0.5rem 0rem;
-          margin: 0rem; }
   /* cierre de características de la página Gallery*/ }
 
 @media only screen and (max-width: 480px) {
@@ -455,6 +433,8 @@ nav {
   /* inicio de características de la página About*/
   .main-about {
     margin: 0.3rem; }
+    .main-about .main-about-img-p {
+      flex-direction: column; }
   /* cierre de características de la página About*/
   /* inicio de características de la página Gallery*/
   .main-gallery .gallery img {

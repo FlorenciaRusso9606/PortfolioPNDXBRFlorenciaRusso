@@ -1,5 +1,55 @@
 /*inicio de mediaqueries*/
 @import"../utilities/vars";
+@media only screen and (max-width:1200px){
+    /*inicio de las características de la página about*/
+    .main-about {
+        display: grid;
+        grid-template-areas:
+        "main-about-img-p" 
+        "main-about-img-p"
+        "main-artist"
+        "main-labels";
+        grid-template-columns: 1fr;
+        grid-template-rows: 1fr;
+        margin:1rem;
+        .main-about-img-p{
+            flex-direction:column;
+        }
+        .main-artist {
+            h1{
+                width: $widht-completo;
+            }
+            .artist-list{
+                display: grid;
+                grid-template-areas: "column1 column2 column3"
+                "column4 column5 column5";
+                .column1{
+                    grid-area: column1;
+                }
+                .column2{
+                    grid-area: column2;
+                }
+                .column3{
+                    grid-area: column3;
+                }
+                .column4{
+                    grid-area: column4;
+                }
+                .column5{
+                    grid-area: column5;
+                }
+            } 
+        }
+        .main-labels{
+            margin:1rem;
+          h2{
+            width: $widht-completo ;
+            }
+            
+        }
+    } 
+    /*fin de las características de la página about*/
+}
 @media only screen and (max-width: 1024px) {
     section {
         div{
@@ -114,31 +164,26 @@
     }
     /* cierre de características de la página Contact */
 }
-
+@media only screen and (max-width:992px){
+    /* inicio de características del header*/
+    nav{
+        @include flex(space-between, center);
+        ul{
+            .nav-bar{
+                border-right:none;
+            }
+        }
+    }
+    /* cierre de características del header*/
+}
 @media only screen and (max-width: 768px) {
-    /* inicio de características de la página Gallery*/
+ /* inicio de características de la página Index*/
     .logo-b{
         display: none;
     }
-   .main-gallery{
-       .gallery{
-           display: flex;
-           flex-direction: column;
-           h1{
-                margin: 0.5rem 2rem;
-                width: ($widht-completo - 10);
-            }
-            h2{
-                margin: 0.5rem 2rem;
-                width: ($widht-completo - 10);
-            }
-            img{
-                margin:2rem;
-            } 
-        }
-    } 
-
-    .main-about {
+    /* cierre de características de la página Index*
+     /* inicio de características de la página About*/
+     .main-about {
         display: grid;
         grid-template-areas:
         "main-about-img-p" 
@@ -148,9 +193,12 @@
         grid-template-columns: 1fr;
         grid-template-rows: 1fr;
         margin:1rem;
+        .main-about-img-p{
+            flex-direction:column;
+        }
         .main-artist {
             h1{
-                width: $widht-completo ;
+                width: $widht-completo;
             }
             .artist-list{
                 display: grid;
@@ -173,27 +221,36 @@
                     grid-area: column5;
                 }
             } 
-                div{
-                    ul{
-                        margin-top: 1rem;
-                        margin-right: 1.2rem;
-                        li{
-                            list-style: none;
-                            padding: 0.5rem 0rem;
-                            margin: 0rem;
-                        }
-                    }
-                }  
-            }
         }
         .main-labels{
+            margin:1rem;
           h2{
             width: $widht-completo ;
             }
             
         }
     }  
+    /* cierre de características de la página About*/
+    /* inicio de características de la página Gallery*/
+   .main-gallery{
+       .gallery{
+           display: flex;
+           flex-direction: column;
+           h1{
+                margin: 0.5rem 2rem;
+                width: ($widht-completo - 10);
+            }
+            h2{
+                margin: 0.5rem 2rem;
+                width: ($widht-completo - 10);
+            }
+            img{
+                margin:2rem;
+            } 
+        }
+    }
     /* cierre de características de la página Gallery*/
+   
 }
 @media only screen and (max-width: 480px) {
     /*inicio de características generales de las páginas*/
@@ -203,7 +260,10 @@
     /*cierre de características generales de las páginas*/
     /* inicio de características de la página About*/
     .main-about {
-        margin: 0.3rem;
+            margin: 0.3rem;
+            .main-about-img-p{
+                flex-direction: column;
+            }
     }  
     /* cierre de características de la página About*/
     /* inicio de características de la página Gallery*/
